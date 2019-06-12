@@ -1,0 +1,254 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>네이버 회원가입</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main_wrap {
+            margin: 0 auto;
+            background-color: #F5F6F7;
+        }
+
+        #header,
+        #cont,
+        #footer {
+            width: 960px;
+            background-color: #F5F6F7;
+            margin: 0 auto;
+            overflow: hidden;
+
+        }
+
+        #header>div>select {
+
+            width: 98px;
+            height: 30px;
+            color: #333333;
+            font-size: 12px;
+            padding: 3px 5px 3px 5px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            float: right;
+            margin-top: 15px;
+        }
+
+        #logo {
+            width: 280px;
+            margin: 0 auto;
+
+        }
+
+        #logo img {
+            margin-left: 0 auto;
+            margin-top: 40px;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input[type=checkbox]+label {
+            background-image: url(../images/ck.png);
+            background-repeat: no-repeat;
+            background-size: 25px;
+
+        }
+
+        input[type=checkbox]:checked+label {
+            background-image: url(../images/ck2.png);
+            background-repeat: no-repeat;
+        }
+
+        label {
+            padding-left: 39px;
+            display: block;
+        }
+
+        #cont>form>div label {
+            font-weight: 700;
+            cursor: pointer;
+            color: #333;
+            line-height: 25px;
+        }
+
+        #all {
+            font-size: 17px;
+            text-decoration: underline;
+        }
+
+        textarea {
+            margin-bottom: 30px;
+            overflow: auto;
+            height: 88px;
+            padding: 12px;
+            display: block;
+            width: 460px;
+        }
+
+        #cont>form {
+            padding: 0 25%;
+            margin-top: 60px
+        }
+
+        .ok {
+            width: 225px;
+            height: 65px;
+            margin-right: 10px;
+            color: white;
+            display: inline;
+            font-size: 19px;
+            text-align: center;
+            cursor: pointer;
+            border: 0px;
+        }
+
+        #ok {
+            background-color: #08a600;
+        }
+
+        #no {
+            background-color: #8e8e8e;
+        }
+
+        #team {
+            font-size: 12px;
+            color: #666666;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        #team a {
+            font-size: 14px;
+            color: #333333;
+        }
+
+        #footer1 {
+            text-align: center;
+        }
+
+        #team2 {
+            text-align: center;
+        }
+
+        #span {
+            margin-left: 7px;
+            color: black;
+            font-size: 11px;
+        }
+
+        .sp {
+            color: #7E7E7E;
+            font-size: 5px;
+        }
+
+        .ck {
+            margin: 10px 0px;
+            font-size:
+        }
+
+        .nok {
+            color: #08A600;
+            font-size: 12px;
+        }
+
+        .gr {
+            color: #8E8E8E;
+            font-size: 12px;
+        }
+
+        .ma {
+            margin: 10px 0px;
+        }
+
+        #ga {
+            font-weight: 700;
+        }
+
+        #logo1 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_wrap">
+        <div id="header">
+            <div>
+                <select>
+                    <option>한국어</option>
+                    <option>English</option>
+                    <option>中文(简体)</option>
+                    <option>中文(台灣)</option>
+                </select>
+            </div>
+            <div id="logo">
+                <a href="http://www.naver.com"><img src="naver1.png" width="240"></a>
+            </div>
+        </div>
+        <div id="cont">
+            <form>
+                <div>
+                    <input type="checkbox" id="ck"><label for="ck" id="all">이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택),<br>프로모션 안내 메일 수신(선택)에 모두 동의합니다.</label>
+                </div><br>
+                <div class="ck">
+                    <input type="checkbox" class="ck" id="ck2"><label for="ck2">네이버 이용약관 동의<span class="nok">(필수)</span></label></div>
+                <textarea>여러분을 환영합니다.
+네이버 서비스 및 제품(이하 ‘서비스’)을 이용해 주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여 네이버 서비스를 제공하는 네이버 주식회사</textarea>
+                <div class="ck">
+                    <input type="checkbox" class="ck" id="ck3">
+                    <label for="ck3">개인정보 수집 및 이용에 대한 안내<span class="nok">(필수)</span></label></div>
+                <textarea>정보통신망법 규정에 따라 네이버에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
+
+1. 수집하는 개인정보
+이용자는 회원가입을 하지 않아도 정보 검색, 뉴스 보기 등 대부분의 네이버 </textarea>
+                <div class="ck">
+                    <input type="checkbox" class="ck" id="ck4">
+                    <label for="ck4">위치정보 이용약관 동의<span class="gr">(선택)</span></label></div>
+                <textarea>위치정보 이용약관에 동의하시면, 위치를 활용한 광고 정보 수신 등을 포함하는 네이버 위치기반 서비스를 이용할 수 있습니다.
+
+
+제 1 조 (목적)</textarea>
+                <div class="ck">
+                    <input type="checkbox" class="ck" id="ck5">
+                    <label for="ck5">이벤트 등 프로모션 알림 메일 수신<span class="gr">(선택)</span></label></div>
+                <br>
+                <div>
+                    <input type="submit" value="비동의" class="ok" id="no"><input type="submit" value="동의" class="ok" id="ok">
+                </div>
+                <div id="team2">
+                    <div class="ma">
+                        <span id="team">
+                            회사, 동아리 등 단체에서 사용할 ID가 필요하세요? <a href="#">단체 회원 가입</a></span></div>
+                </div>
+            </form>
+        </div>
+        <div id="footer">
+            <div id="footer1">
+                <div class="ma">
+                    <a href="#">이용약관</a> <span class="sp">|</span> <a href="#" id="ga">개인정보처리방침</a> <span class="sp">|</span> <a href="#">책임의 한계와 법적고지</a> <span class="sp">|</span> <a href="#">회원정보 고객센터</a><br>
+                    <a href="#"><img src="naver1.png" width="63" id="logo1"></a><span id="span">Copyright <a href="#" style="font-weight: 600">NAVER Corp.</a> All Rights Reserved.</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

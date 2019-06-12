@@ -1,0 +1,294 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>네이버 회원가입</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #F5F6F7;
+        }
+
+        #main_wrap {
+            width: 980px;
+            background-color: #F5F6F7;
+            margin: 0 auto;
+        }
+
+        #header {
+            background-color: #F5F6F7;
+        }
+
+        img {
+            margin: 55px 370px;
+
+        }
+
+        #bday>li {
+            float: left;
+            list-style: none;
+        }
+
+        #cont {
+            background-color: #F5F6F7;
+
+        }
+
+        #cont table {
+            margin: 0 auto;
+        }
+
+        .text {
+            width: 460px;
+            height: 51px;
+            color: #000000;
+            font-size: 15px;
+            background-color: white;
+            padding: 10px 40px 10px 14px;
+            border: solid 1px #dadada;
+
+        }
+
+        h3 {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 19px 0px 8px;
+        }
+
+        .bday {
+            width: 147px;
+            height: 51px;
+            margin-right: 9px;
+            padding: 11px 14px;
+            border: solid 1px #dadada;
+        }
+
+        #ph {
+            width: 335px;
+            height: 51px;
+            padding: 10px 15px 10px 14px;
+            border: solid 1px #dadada;
+        }
+
+        #ph1 {
+            width: 115px;
+            height: 51px;
+            font-size: 14px;
+            background-color: #08A600;
+            color: #FFFFFF;
+            cursor: pointer;
+            text-align: center;
+            border: 0px;
+
+        }
+
+        #ph2 {
+            width: 460px;
+            height: 61px;
+            font-weight: 200;
+            color: #fff;
+            background-color: #08a600;
+            padding: 21px 0 17px;
+            font-size: 20px;
+            border: 0px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #footer {
+            margin: 0 auto;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        span {
+            color: #7E7E7E;
+            font-size: 5px;
+        }
+
+        #footer>div {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        #ga {
+            font-weight: 700;
+        }
+
+        #logo1 {
+            margin-top: 10px;
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        #span {
+            margin-left: 7px;
+            color: black;
+            font-size: 11px;
+        }
+
+        #lock {
+            margin: 0 auto;
+            position: absolute;
+            left: 420px;
+            top: -6px;
+        }
+
+        #lock2 {
+            margin: 0 auto;
+            position: absolute;
+            left: 420px;
+            top: -6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_wrap">
+        <div id="header">
+            <a href="http://wwwnaver.com"><img src="naver1.png" width="240"></a>
+        </div>
+        <div id="cont">
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>아이디</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" placeholder="                                                                            @naver.com" class="text" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>비밀번호</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="position: relative">
+                                <input type="password" class="text">
+                                <img src="../images/lock.png" id="lock"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>비밀번호 재확인</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span style="position: relative">
+                                <input type="password" class="text">
+                                <img src="../images/lock2.png" id="lock2">
+                            </span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>이름</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="text"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>생년월일</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul id="bday">
+                                <li><input type="text" placeholder="년(4자)" class="bday"></li>
+                                <li><select class="bday">
+                                        <option>월</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select></li>
+                                <li><input type="text" placeholder="일" class="bday"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>성별</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><select class="text">
+                                <option>성별</option>
+                                <option>남자</option>
+                                <option>여자</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>본인 확인 이메일<span>(선택)</span></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="text" placeholder="선택입력"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>휴대전화</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select class="text" style="margin-bottom: 5px">
+                                <option>대한민국 +82</option>
+                                <option>독일 +49</option>
+                                <option>미국/캐나다 +1</option>
+                                <option>브라질 +55</option>
+                                <option>중국+86</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="전화번호 입력" id="ph" style="margin-bottom: 5px"> <input type="button" value="인증번호 받기" id="ph1"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="text" placeholder="인증번호 입력하세요" style="margin-bottom: 5px"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="가입하기" id="ph2"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="footer">
+            <div>
+                <a href="#">이용약관</a> <span>|</span> <a href="#" id="ga">개인정보처리방침</a> <span>|</span> <a href="#">책임의 한계와 법적고지</a> <span>|</span> <a href="#">회원정보 고객센터</a><br>
+
+                <a href="#"><img src="naver1.png" width="63" id="logo1"></a><span id="span">Copyright <a href="#" style="font-weight: 600">NAVER Corp.</a> All Rights Reserved.</span>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
