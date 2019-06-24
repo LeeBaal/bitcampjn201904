@@ -44,14 +44,14 @@
         }
 
         .text {
-            width: 460px;
-            height: 51px;
+            width: 430px;
+            height: 29px;
             color: #000000;
             font-size: 15px;
             background-color: white;
-            padding: 10px 40px 10px 14px;
-            border: solid 1px #dadada;
-
+            border: 0px solid white;
+            margin-top: 11px;
+            margin-left: 10px;
         }
 
         h3 {
@@ -61,21 +61,27 @@
             margin: 19px 0px 8px;
         }
 
-        .bday {
+        .bday1{
             width: 147px;
             height: 51px;
             margin-right: 9px;
-            padding: 11px 14px;
             border: solid 1px #dadada;
+            background-color: white;
         }
-
+        .bday {
+            width: 117px;
+            height: 29px;
+            margin: 10px;
+            margin-left: 14px;
+            border: 0px;
+        }
         #ph {
-            width: 335px;
-            height: 51px;
-            padding: 10px 15px 10px 14px;
-            border: solid 1px #dadada;
+            width: 304px;
+            height: 29px;
+            margin: 11px;
+            border: 0px;
+            
         }
-
         #ph1 {
             width: 115px;
             height: 51px;
@@ -85,9 +91,7 @@
             cursor: pointer;
             text-align: center;
             border: 0px;
-
         }
-
         #ph2 {
             width: 460px;
             height: 61px;
@@ -101,7 +105,6 @@
             text-align: center;
             margin-top: 20px;
         }
-
         #footer {
             margin: 0 auto;
         }
@@ -139,7 +142,12 @@
             color: black;
             font-size: 11px;
         }
-
+        #naver{
+            margin: 0 auto;
+            position: absolute;
+            left: 360px;
+            top: -6px;
+        }
         #lock {
             margin: 0 auto;
             position: absolute;
@@ -153,13 +161,52 @@
             left: 420px;
             top: -6px;
         }
+        .id{
+            width: 460px;
+            height: 51px;
+            color: #000000;
+            font-size: 15px;
+            background-color: white;
+            border: solid 1px #dadada;
+        }
+        #email{
+            width: 334px;
+        }
+        #pw1{
+            width: 404px;
+        }
+        #pw2{
+            width: 404px;
+        }
+        #ph3{
+            border: 1px solid #dadada;
+            margin-right: 9px;
+            float: left;
+            height: 51px;
+            width: 330px;
+            background-color: white;
+        }
+        #ph4{
+            border: 0px;
+            float: right;
+            width: 115px;
+            margin-top: 1px;
+        }
+        #ph5{
+           
+            width: 460px;
+            margin-top: 5px;
+        }
+        #idid{
+            margin-top: 5px;
+        }
     </style>
 </head>
 
 <body>
     <div id="main_wrap">
         <div id="header">
-            <a href="http://wwwnaver.com"><img src="naver1.png" width="240"></a>
+            <a href="http://www.naver.com"><img src="naver1.png" width="240"></a>
         </div>
         <div id="cont">
             <form>
@@ -170,7 +217,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="email" placeholder="                                                                            @naver.com" class="text" id="email"></td>
+                        <td><label for="email"><div class="id"><span style="position: relative"><input type="email" class="text" id="email"><img src="../images/lo.PNG" id="naver"></span></div></label></td>
                     </tr>
                     <tr>
                         <td>
@@ -178,9 +225,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><span style="position: relative">
-                                <input type="password" class="text">
-                                <img src="../images/lock.png" id="lock"></span></td>
+                        <td><label for="pw1"><div class="id"><span style="position: relative">
+                                <input type="password" class="text" id="pw1">
+                            <img src="../images/lock.png" id="lock"></span></div></label></td>
                     </tr>
                     <tr>
                         <td>
@@ -188,10 +235,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><span style="position: relative">
-                                <input type="password" class="text">
+                        <td><label for="pw2"><div class="id"><span style="position: relative">
+                                <input type="password" class="text" id="pw2">
                                 <img src="../images/lock2.png" id="lock2">
-                            </span></td>
+                            </span></div></label></td>
                     </tr>
                     <tr>
                         <td>
@@ -199,7 +246,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" class="text"></td>
+                        <td><label for="name"><div class="id"><input type="text" class="text" id="name"></div></label></td>
                     </tr>
                     <tr>
                         <td>
@@ -209,8 +256,8 @@
                     <tr>
                         <td>
                             <ul id="bday">
-                                <li><input type="text" placeholder="년(4자)" class="bday"></li>
-                                <li><select class="bday">
+                                <li><label for="year"><div class="bday1"><input type="text" placeholder="년(4자)" class="bday" id="year"></div></label></li>
+                                <li><label for="mon"><div class="bday1"><select class="bday" id="mon">
                                         <option>월</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -224,8 +271,8 @@
                                         <option>10</option>
                                         <option>11</option>
                                         <option>12</option>
-                                    </select></li>
-                                <li><input type="text" placeholder="일" class="bday"></li>
+                                    </select></div></label></li>
+                                <li><label for="day"><div class="bday1"><input type="text" placeholder="일" class="bday" id="day"></div></label></li>
                             </ul>
                         </td>
                     </tr>
@@ -235,11 +282,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><select class="text">
+                        <td><label for="select"><div class="id"><select class="text" id="select">
                                 <option>성별</option>
                                 <option>남자</option>
                                 <option>여자</option>
-                            </select></td>
+                            </select></div></label></td>
                     </tr>
                     <tr>
                         <td>
@@ -247,7 +294,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" class="text" placeholder="선택입력"></td>
+                        <td><label for="ck_email"><div class="id"><input type="text" class="text" placeholder="선택입력" id="ck_email"></div></label></td>
                     </tr>
                     <tr>
                         <td>
@@ -255,22 +302,22 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <select class="text" style="margin-bottom: 5px">
+                        <td><label for="korea">
+                            <div class="id"><select class="text" style="margin-bottom: 5px" id="korea">
                                 <option>대한민국 +82</option>
                                 <option>독일 +49</option>
                                 <option>미국/캐나다 +1</option>
                                 <option>브라질 +55</option>
                                 <option>중국+86</option>
 
-                            </select>
+                                </select></div></label>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="전화번호 입력" id="ph" style="margin-bottom: 5px"> <input type="button" value="인증번호 받기" id="ph1"></td>
+                        <td><div id="ph5"><label for="ph"><div id="ph3" class="id"><input type="text" placeholder="전화번호 입력" id="ph" class="text"></div></label><div id="ph4"><input type="button" value="인증번호 받기" id="ph1"></div></div></td>
                     </tr>
                     <tr>
-                        <td><input type="text" class="text" placeholder="인증번호 입력하세요" style="margin-bottom: 5px"></td>
+                        <td><label for="inj"><div class="id" id="idid"><input type="text" class="text" placeholder="인증번호 입력하세요" style="margin-bottom: 5px" id="inj"></div></label></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="가입하기" id="ph2"></td>
@@ -288,7 +335,31 @@
         </div>
 
     </div>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.id').click(function(){
+                $(this).css('border', 'solid 1px #0ebc07');
+            });
+            
+            $('.text').blur(function(){
+                $('.id').css('border', 'solid 1px #dadada');
+            });
+            $('.bday1').click(function(){
+                $(this).css('border', 'solid 1px #0ebc07');
+            });
+            $('.bday').blur(function(){
+                $('.bday1').css('border', 'solid 1px #dadada');
+            });
+            var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+            if(!getMail.test($('#email').val())){
+                $('#email').val("");
+                $('#email').focusin();
+                return false;
+            }
+        });
+        
+    </script>
 </body>
 
 </html>

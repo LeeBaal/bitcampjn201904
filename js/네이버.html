@@ -56,7 +56,7 @@
         }
 
         input[type=checkbox] {
-            display: none;
+           display: none;
         }
 
         input[type=checkbox]+label {
@@ -184,6 +184,14 @@
         #logo1 {
             margin-top: 10px;
         }
+        #okok{
+            color: red;
+            font-size: 14px;
+            margin: 10px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            display: none;
+        }
     </style>
 </head>
 
@@ -203,10 +211,11 @@
             </div>
         </div>
         <div id="cont">
-            <form>
+            <form action="http://127.0.0.1:60046/html5/%EA%B3%BC%EC%A0%9C/%EB%84%A4%EC%9D%B4%EB%B2%842.html">
                 <div>
                     <input type="checkbox" id="ck"><label for="ck" id="all">이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택),<br>프로모션 안내 메일 수신(선택)에 모두 동의합니다.</label>
                 </div><br>
+                <div id="ck1">
                 <div class="ck">
                     <input type="checkbox" class="ck" id="ck2"><label for="ck2">네이버 이용약관 동의<span class="nok">(필수)</span></label></div>
                 <textarea>여러분을 환영합니다.
@@ -227,8 +236,9 @@
 제 1 조 (목적)</textarea>
                 <div class="ck">
                     <input type="checkbox" class="ck" id="ck5">
-                    <label for="ck5">이벤트 등 프로모션 알림 메일 수신<span class="gr">(선택)</span></label></div>
+                    <label for="ck5">이벤트 등 프로모션 알림 메일 수신<span class="gr">(선택)</span></label></div></div>
                 <br>
+                <div id="okok">네이버 이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.</div>
                 <div>
                     <input type="submit" value="비동의" class="ok" id="no"><input type="submit" value="동의" class="ok" id="ok">
                 </div>
@@ -249,6 +259,34 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#ck').change(function(){
+                var chk = $(this).prop('checked');
+                            //this.checked
+                if(chk){
+                $('.ck').children().prop('checked', true);
+                }else{
+                $('.ck').children().prop('checked', false);
+                }
+                
+            });
+            $('#ok').click(function(){
+                var chk2 = $('#ck2').prop('checked');
+                var chk3 = $('#ck3').prop('checked');
+                
+                if(chk2==false || chk3==false){
+                    $('#okok').css('display','block');
+                    return false;
+                }else{
+                    $('#okok').css('display','none');
+                }
+            });
+            
+            
+        });
+    </script>
 </body>
 
 </html>
