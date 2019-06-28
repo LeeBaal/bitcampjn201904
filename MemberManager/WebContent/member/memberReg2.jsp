@@ -46,9 +46,9 @@ request.setCharacterEncoding("UTF-8");
 <div id="contents">
 	<h3>회원가입 요청 처리 페이지</h3>
 	<hr>
-	<%= memberInfo.getuName() %>(<%= memberInfo.getuId() %>) <br>
-	<%= memberInfo.getuPw() %><br>
-	<%= memberInfo.getReDate() %>
+	${memberInfo.uName}(${memberInfo.uId})<br>
+	${memberInfo.uPw}<br>
+	${memberInfo.regDate}
 </div>
 <!-- 컨텐츠 끝 -->
 

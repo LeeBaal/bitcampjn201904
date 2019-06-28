@@ -8,10 +8,10 @@ public class MemberInfo {
 	private String uPw;
 	private String uName;
 	private String uPhoto;
-	private Date reDate;
+	private Date regDate;
 	
 	public MemberInfo() {
-		this.reDate = new Date();
+		this.regDate = new Date();
 	}
 
 	public MemberInfo(String uId, String uPw, String uName, String uPhoto) {
@@ -20,7 +20,7 @@ public class MemberInfo {
 		this.uPw = uPw;
 		this.uName = uName;
 		this.uPhoto = uPhoto;
-		this.reDate = new Date();
+		this.regDate = new Date();
 	}
 	
 	
@@ -56,25 +56,27 @@ public class MemberInfo {
 		this.uPhoto = uPhoto;
 	}
 
-	public Date getReDate() {
-		return reDate;
+	
+
+	public Date getRegDate() {
+		return regDate;
 	}
 
-	public void setReDate(Date reDate) {
-		this.reDate = reDate;
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 
 	@Override
 	public String toString() {
 		return "MemberInfo [uId=" + uId + ", uPw=" + uPw + ", uName=" + uName + ", uPhoto=" + uPhoto + ", reDate="
-				+ reDate + "]";
+				+ regDate + "]";
 	}
 	
 	
 	// MemberInfo 객체 -> LoginInfo 객체 반환
 	public LoginInfo toLoginInfo() {
 		
-		return new LoginInfo(uId, uName, uPhoto);
+		return new LoginInfo(uId, uName, uPhoto, regDate);
 		
 	}
 	

@@ -1,10 +1,13 @@
 <%@page import="member.LoginInfo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <%-- <jsp:useBean id="loginInfo" class="member.MemberInfo" scope="session"/> --%>
-<%
+<%--
 	LoginInfo loginInfo = (LoginInfo)session.getAttribute("loginInfo");
-%>
+--%>
 
 <!DOCTYPE html>
 <html>
@@ -31,30 +34,28 @@
 
 <!-- 컨텐츠 시작 -->
 <div id="contents">
-<%
-	if(loginInfo != null){
-%>
+
 	<h3>회원 정보 페이지</h3>
+	
+	<c:if test="${loginInfo ne null}">
 	
 	${sessionScope.loginInfo}
 	
 	<hr>
 	
-		<img src="../images/<%= loginInfo.getuPhoto() %>"><img src="../images/${loginInfo.uPhoto}">
-		<h4>이름 : <%= loginInfo.getuName() %> / ${loginInfo.uName}</h4>
-		<h4>아이디 : <%= loginInfo.getuId() %> / ${loginInfo.uId}</h4>
+		<img src="../images/${loginInfo.uPhoto}">
+		<h4>이름 : ${loginInfo.uName}</h4>
+		<h4>아이디 : ${loginInfo.uId}</h4>
+		<h4>가입일 : <fmt:formatDate value="${loginInfo.regDate}" pattern="yyyy.MM.dd" /></h4>
 		
-	<%-- loginInfo --%>
-	<%
-	}else{
-	%>
+	</c:if>
+	<c:if test="${loginInfo eq null}">
 	<script>
 		alert("로그인 후 이용가능한 페이지 입니다.");
 		location.href = "login.jsp";
 	</script>
-	<%
-	}
-	%>
+	</c:if>
+	
 </div>
 <!-- 컨텐츠 끝 -->
 
